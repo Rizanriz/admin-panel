@@ -1,0 +1,32 @@
+<div class="flex justify-center items-center min-h-screen w-screen bg-gray-500">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" 
+            class="bg-slate-500 p-8 rounded-lg shadow-md w-full max-w-md">
+    <div>
+      <h1 class="block text-black font-bold mb-6 text-center">Enter details</h1>
+    </div>
+
+    <div class="mb-4">
+      <label for="imgLink" class="block text-gray-700 font-bold mb-2">Image Link:</label>
+      <input id="imgLink" type="text" formControlName="imgLink" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+    </div>
+
+    <div class="mb-4">
+      <label for="productName" class="block text-gray-700 font-bold mb-2">Product Name:</label>
+      <input id="productName" type="text" formControlName="productName" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+    </div>
+
+    <div class="mb-4">
+      <label for="price" class="block text-gray-700 font-bold mb-2">Price:</label>
+      <input id="price" type="number" formControlName="price" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+    </div>
+
+    <div class="mb-4">
+      <label for="description" class="block text-gray-700 font-bold mb-2">Description:</label>
+      <textarea id="description" formControlName="description" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+    </div>
+
+    <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600">
+      Submit
+    </button>
+  </form>
+</div>
